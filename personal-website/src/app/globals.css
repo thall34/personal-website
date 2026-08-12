@@ -37,6 +37,7 @@ header {
 footer {
     margin-top: auto;
     text-align: center;
+    padding: 1em;
     background-color: var(--hunter-green);
 }
 
@@ -47,6 +48,38 @@ main {
     font-size: 1.1em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.1s ease-in-out;
+}
+
+a:hover {
+    color: var(--hunter-green);
+    text-decoration: underline;
+    transform: translate(0.4em);
+}
+
+h1, p {
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background-color: var(--light-green);
+    padding: 0.5em 1em;
+    border-radius: 1.4em;
+}
+
+button > img {
+    width: 2em;
+}
+
+button:disabled > img {
+    opacity: 20%;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -54,11 +87,12 @@ main {
     align-items: start;
     margin: 3em;
     padding: 2em;
+    gap: 1em;
     box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
 }
 
 .custom-background {
-    background-image: url('../../public/images/old-paper-bg.jpg');
+    background-image: url('/images/old-paper-bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -68,6 +102,7 @@ main {
 .projects {
     display: flex;
     flex-direction: column;
+    padding-top: 2em;
     gap: 5em;
     width: 90%;
 }
@@ -77,6 +112,7 @@ main {
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    gap: 1em;
     box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
     background-color: var(--off-white)
 }
@@ -103,10 +139,14 @@ main {
     align-items: center;
     width: 50%;
     padding: 3em 0em;
+    gap: 1em;
 }
 
 .project-card-body {
-    filter: drop-shadow(0em 0em 1em rgba(0, 0, 0, 0.5));
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    filter: drop-shadow(0em 0em 0.5em rgba(0, 0, 0, 0.5));
 }
 
 .about-me {
@@ -116,6 +156,7 @@ main {
     align-items: center;
     margin: 3em;
     padding: 2em;
+    gap: 1em;
     background-color: var(--off-white);
     box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
 }
@@ -137,6 +178,72 @@ main {
     width: 80%;
     margin: 3em 0em;
     padding: 2em;
+    gap: 1em;
     background-color: var(--off-white);
     box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+}
+
+.list-item {
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-item:hover {
+    color: var(--hunter-green);
+    transform: translate(1em);
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.display-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.display {
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.circle-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.circle {
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.5em;
+    border: 0.1em solid black;
+}
+
+.filled {
+    background-color: black;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--off-white);
+    opacity: 0%;
+}
+
+.highlight {
+    opacity: 90%;
 }

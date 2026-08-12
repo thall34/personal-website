@@ -1,0 +1,13 @@
+function AboutMe(): React.JSX.Element {
+    return (
+        <section className='about-me custom-background'>
+            <h1>About Me</h1>
+            <p>I was an Audio Post Re-Recording Mixer from June 2015 until May 2026 before I decided to change my career focus into web development.</p>
+            <p>I have always had an interest in how computers work under the hood, and after doing some research I found a great online resource in the Odin Project.</p>
+            <p>Over the past year, I have went from not knowing anything about HTML to building complete full stack applications from scratch which is extremely rewarding.</p>
+            <p>My goal is to bring my technical and creative expertise to any project/company I get to work with next.</p>
+        </section>
+    )
+};
+
+export default AboutMe;
