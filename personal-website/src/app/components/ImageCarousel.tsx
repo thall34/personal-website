@@ -1,16 +1,23 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { AdvancedImage } from '@cloudinary/react';
 import otherProjects from '../data/otherProjects';
 
-function ImageCarousel({ height }: { height: number }): React.JSX.Element {
+function ImageCarousel(): React.JSX.Element {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [timerReset, setTimerReset] = useState(0);
     const [projectHover, setProjectHover] = useState(false);
 
-    const width = height * 1.5;
+    // const width = height * 1.5;
     const maxIndex = otherProjects.length - 1;
+
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: `${process.env.NEXT_PUBLIC_CLOUD_NAME}`
+        }
+    });
 
     function handleShiftRight(): void {
         if (currentIndex === maxIndex) {
@@ -56,15 +63,18 @@ function ImageCarousel({ height }: { height: number }): React.JSX.Element {
                 {currentIndex !== 0 ? 
                     <button onClick={handleShiftLeft}><img src='./images/chevron-left.svg' alt='Previous'/></button> 
                     : <button disabled><img src='./images/chevron-left.svg' alt='Previous'/></button>}
-                <div className="display" style={{ height: `${height}px`, width: `${width}px` }}>
-                    <div className="image-container" style={{ transform: `translateX(-${currentIndex * width}px)` }}>
+                <div className="display">
+                    <div className="image-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     {otherProjects.map((project) => (
                         <div key={project.id}>
                         <div className={`overlay ${projectHover ? 'highlight' : ''}`} onMouseEnter={() => setProjectHover(true)} onMouseLeave={() => setProjectHover(false)}>
                             <h1>{project.name}</h1>
                             <p><em>{project.techStack}</em></p>
                         </div>
-                        <Image src={project.imageSrc} alt={project.imageAlt} width={width} height={height} />
+                            <AdvancedImage 
+                                cldImg={cld.image(project.imageSrc).quality('auto').format('auto')} 
+                                alt={project.imageAlt} 
+                            />
                         </div>
                     ))}
                     </div>

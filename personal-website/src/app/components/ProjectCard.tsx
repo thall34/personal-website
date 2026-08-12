@@ -1,33 +1,34 @@
-import Image from 'next/image';
+'use client'
+
 import Link from 'next/link';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { AdvancedImage } from '@cloudinary/react';
 import { ProjectObject } from '../types/types';
 
-function ProjectCard({ project, indentation }: { project: ProjectObject, indentation: string }): React.JSX.Element {
-    if (indentation === 'right') {
-        return (
-            <div className={`project-card ${indentation} custom-background`}>
-                <div className='project-card-body'>
-                    <p>{project.description}</p>
-                    <p>{project.techStack}</p>
-                    <p>{project.learningOutcome}</p>
-                </div>
-                <div className='project-card-header'>
-                    <Link href={project.url} target='_blank' rel='noopener noreferrer'>
-                        <h1>{project.title}</h1>
-                    </Link>
-                    <Image src={project.imageSrc} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} />
-                </div>
-            </div>
-        )
-    };
+function ProjectCard({ project }: { project: ProjectObject }): React.JSX.Element {
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: `${process.env.NEXT_PUBLIC_CLOUD_NAME}`
+        }
+    });
+
+    const image = cld
+        .image(project.imageSrc)
+        .quality('auto')
+        .format('auto');
 
     return (
-        <div className={`project-card ${indentation} custom-background`}>
+        <div className={`project-card custom-background`}>
             <div className='project-card-header'>
                 <Link href={project.url} target='_blank' rel='noopener noreferrer'>
                     <h1>{project.title}</h1>
                 </Link>
-                <Image src={project.imageSrc} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} />
+                <AdvancedImage
+                    cldImg={image}
+                    alt={project.imageAlt}
+                    width={project.imageWidth}
+                    height={project.imageHeight}
+                />
             </div>
             <div className='project-card-body'>
                 <p>{project.description}</p>

@@ -4,25 +4,25 @@ export const languages: SkillObject[] = [
     {
         id: 0,
         name: 'HTML5',
-        imageSrc: '/images/skill-logos/html.svg',
+        imageSrc: 'html_jeuqiw',
         imageAlt: 'HTML Logo',
     },
     {
         id: 1,
         name: 'CSS3',
-        imageSrc: '/images/skill-logos/css.png',
+        imageSrc: 'css_x0mrvi',
         imageAlt: 'CSS Logo',
     },
     {
         id: 2,
         name: 'JavaScript(ES6+)',
-        imageSrc: '/images/skill-logos/javascript.png',
+        imageSrc: 'javascript_llxygg',
         imageAlt: 'JavaScript Logo',
     },
     {
         id: 3,
         name: 'TypeScript',
-        imageSrc: '/images/skill-logos/typescript.svg',
+        imageSrc: 'typescript_m9osyu',
         imageAlt: 'TypeScript Logo',
     },
 ];
@@ -31,26 +31,26 @@ export const frameworks: SkillObject[] = [
     {
         id: 0,
         name: 'React.js',
-        imageSrc: '/images/skill-logos/react.svg',
+        imageSrc: 'react_ebhve9',
         imageAlt: 'React Logo',
     },
     {
         id: 1,
         name: 'Node.js',
-        imageSrc: '/images/skill-logos/node.svg',
+        imageSrc: 'node_i4njpo',
         imageAlt: 'Node Logo',
     },
     {
         id: 2,
         name: 'Express',
-        imageSrc: '/images/skill-logos/express.svg',
+        imageSrc: 'express_uttxz9',
         imageAlt: 'Express Logo',
     },
     {
         id: 3,
         name: 'Next.js',
-        imageSrc: '/images/skill-logos/next.png',
-        imageAlt: 'HTML Logo',
+        imageSrc: 'next_aqhoak',
+        imageAlt: 'Next Logo',
     },
 ];
 
@@ -58,43 +58,43 @@ export const tools: SkillObject[] = [
     {
         id: 0,
         name: 'Git/Github',
-        imageSrc: '/images/skill-logos/git.svg',
+        imageSrc: 'git_gc1ysu',
         imageAlt: 'Github Logo',
     },
     {
         id: 1,
         name: 'PostgreSQL',
-        imageSrc: '/images/skill-logos/psql.svg',
+        imageSrc: 'psql_x1hgxy',
         imageAlt: 'PostgreSQL Logo',
     },
     {
         id: 2,
         name: 'Vite',
-        imageSrc: '/images/skill-logos/vite.svg',
+        imageSrc: 'vite_lcvfm1',
         imageAlt: 'Vite Logo',
     },
     {
         id: 3,
         name: 'Webpack',
-        imageSrc: '/images/skill-logos/webpack.png',
+        imageSrc: 'webpack_gnripg',
         imageAlt: 'Webpack Logo',
     },
     {
         id: 4,
         name: 'Jest',
-        imageSrc: '/images/skill-logos/jest.png',
+        imageSrc: 'jest_zsngfr',
         imageAlt: 'Jest Logo',
     },
     {
         id: 5,
         name: 'RESTful APIs',
-        imageSrc: '/images/skill-logos/api.png',
+        imageSrc: 'api_thndu9',
         imageAlt: 'REST API Logo',
     },
     {
         id: 6,
         name: 'Postman',
-        imageSrc: '/images/skill-logos/postman.png',
+        imageSrc: 'postman_cn4soq',
         imageAlt: 'Postman Logo',
     },
 ];

@@ -8,13 +8,13 @@ function Projects(): React.JSX.Element {
             <h1>My Projects</h1>
             {mainProjects.map((project) => (
                 project.id % 2 !== 0 ? (
-                    <ProjectCard key={project.id} project={project} indentation='right' />   
+                    <ProjectCard key={project.id} project={project} />   
                 ) : (
-                    <ProjectCard key={project.id} project={project} indentation='left' />
+                    <ProjectCard key={project.id} project={project} />
                 )
             ))}
             <div className='line-break-project'/>
-            <ImageCarousel height={400} />
+            <ImageCarousel />
         </section>
     )
 }
