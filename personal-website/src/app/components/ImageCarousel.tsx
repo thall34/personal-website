@@ -59,12 +59,12 @@ function ImageCarousel({ height }: { height: number }): React.JSX.Element {
                 <div className="display" style={{ height: `${height}px`, width: `${width}px` }}>
                     <div className="image-container" style={{ transform: `translateX(-${currentIndex * width}px)` }}>
                     {otherProjects.map((project) => (
-                        <div>
+                        <div key={project.id}>
                         <div className={`overlay ${projectHover ? 'highlight' : ''}`} onMouseEnter={() => setProjectHover(true)} onMouseLeave={() => setProjectHover(false)}>
                             <h1>{project.name}</h1>
                             <p><em>{project.techStack}</em></p>
                         </div>
-                        <Image key={project.id} src={project.imageSrc} alt={project.imageAlt} width={width} height={height} />
+                        <Image src={project.imageSrc} alt={project.imageAlt} width={width} height={height} />
                         </div>
                     ))}
                     </div>
