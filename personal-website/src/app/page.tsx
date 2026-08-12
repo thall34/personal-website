@@ -8,9 +8,13 @@ export default function Home() {
     return (
         <>
             <Hero />
+            <div className='line-break'/>
             <Projects />
+            <div className='line-break'/>
             <AboutMe />
+            <div className='line-break'/>
             <Skills />
+            <div className='line-break'/>
             <Contact />
         </>
     );

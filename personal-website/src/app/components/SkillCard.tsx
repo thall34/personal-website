@@ -1,10 +1,15 @@
-function SkillCard({ category, list }: { category: string, list: string[]}): React.JSX.Element {
+import { SkillObject } from "../types/types";
+
+function SkillCard({ category, list }: { category: string, list: SkillObject[]}): React.JSX.Element {
     return (
         <div className='skill-card'>
             <h1>{category}</h1>
-            <ul>
-                {list.map((item, index) => (
-                    <li key={index}className='list-item'>{item}</li>
+            <ul className='skill-list'>
+                {list.map((item) => (
+                    <li key={item.id} className='list-item'>
+                        <img src={item.imageSrc} alt={item.imageAlt} />
+                        <p>{item.name}</p>
+                    </li>
                 ))}
             </ul>
         </div>

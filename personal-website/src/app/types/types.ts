@@ -18,3 +18,10 @@ export interface ProjectObject {
     techStack: string;
     learningOutcome: string;
 };
+
+export interface SkillObject {
+    id: number;
+    name: string;
+    imageSrc: string;
+    imageAlt: string;
+};

@@ -13,6 +13,7 @@ function Projects(): React.JSX.Element {
                     <ProjectCard key={project.id} project={project} indentation='left' />
                 )
             ))}
+            <div className='line-break-project'/>
             <ImageCarousel height={400} />
         </section>
     )
