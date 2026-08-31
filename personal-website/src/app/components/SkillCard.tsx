@@ -12,7 +12,7 @@ function SkillCard({ category, list }: { category: string, list: SkillObject[]})
     });
 
     return (
-        <div className='skill-card'>
+        <div className='skill-card fly-in-left'>
             <h1>{category}</h1>
             <ul className='skill-list'>
                 {list.map((item) => (

@@ -1,10 +1,27 @@
-import Image from 'next/image';
-import logo from '../../public/images/logo.png'
+import Link from 'next/link';
 
 export default function Header() {
     return (
         <header>
-            <Image src={logo} alt='Tyler Hall Logo' width={100} />
+            <nav>
+                <ul>
+                    <li>
+                        <Link href='#hero'>Back to Top</Link>
+                    </li>
+                    <li>
+                        <Link href='#projects'>Projects</Link>
+                    </li>
+                    <li>
+                        <Link href='#about-me'>About</Link>
+                    </li>
+                    <li>
+                        <Link href='#skills'>Skills</Link>
+                    </li>
+                    <li>
+                        <Link href='#contact'>Contact</Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 };

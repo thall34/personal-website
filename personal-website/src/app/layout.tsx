@@ -7,7 +7,6 @@ import type { Viewport } from 'next';
 export const metadata: Metadata = {
   title: "Personal Website",
   description: "Created by Tyler Hall",
-  // viewport: 'width=device-width, initial-scale=1',
 };
 
 export const viewport: Viewport = {

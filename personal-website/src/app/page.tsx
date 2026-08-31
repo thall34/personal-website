@@ -16,6 +16,7 @@ export default function Home() {
             <Skills />
             <div className='line-break'/>
             <Contact />
+            <div className='line-break'/>
         </>
     );
 };

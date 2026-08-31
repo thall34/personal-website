@@ -4,14 +4,10 @@ import mainProjects from "../data/mainProjects";
 
 function Projects(): React.JSX.Element {
     return (
-        <section className="projects">
-            <h1>My Projects</h1>
+        <section id="projects">
+            <h1><span>Selected</span> <span className="highlight-text">Projects</span></h1>
             {mainProjects.map((project) => (
-                project.id % 2 !== 0 ? (
                     <ProjectCard key={project.id} project={project} />   
-                ) : (
-                    <ProjectCard key={project.id} project={project} />
-                )
             ))}
             <div className='line-break-project'/>
             <ImageCarousel />

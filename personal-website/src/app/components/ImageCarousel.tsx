@@ -58,7 +58,7 @@ function ImageCarousel(): React.JSX.Element {
 
     return (
         <div className="carousel-container">
-            <h1>My Other Projects</h1>
+            <h1>My Other <span className='highlight-text'>Projects</span></h1>
             <div className="display-container">
                 {currentIndex !== 0 ? 
                     <button onClick={handleShiftLeft}><img src='./images/chevron-left.svg' alt='Previous'/></button> 
