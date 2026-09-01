@@ -11,6 +11,9 @@ function Contact(): React.JSX.Element {
             <a href='tel:+14163177325'>
                 <p>Cell Phone: 416-317-7325</p>
             </a>
+            <Link href='https://github.com/thall34' target='_blank' rel='noopener noreferrer'>
+                <p>Github: github.com/thall34</p>
+            </Link>
             <Link href='https://linkedin.com/in/tyler-hall-7b8a0372' target='_blank' rel='noopener noreferrer'>
                 <p>LinkedIn: linkedin.com/in/tyler-hall-7b8a0372</p>
             </Link>
