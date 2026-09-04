@@ -147,9 +147,7 @@ ul {
 
 #hero {
     display: flex;
-    flex-direction: column;
     width: 80%;
-    align-items: start;
     margin: 6em;
     padding: 2em;
     gap: 1em;
@@ -207,6 +205,26 @@ ul {
     font-size: 1.5em;
     background-color: var(--card-background);
     scroll-margin-top: 9em;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2em;
+    padding: 1.5em;
+    width: 70%;
+}
+
+.hero-image {
+    display: flex;
+    width: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-image > img {
+    width: 100%;
 }
 
 .project-card {
@@ -381,6 +399,11 @@ ul {
 
     #hero {
         width: 70%;
+        flex-direction: column;
+    }
+
+    .hero-text, .hero-image {
+        width: 100%;
     }
 
     .project-card {
