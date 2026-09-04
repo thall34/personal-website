@@ -503,6 +503,14 @@ ul {
         width: 100%;
     }
 
+    #websites {
+        text-align: center;
+    }
+
+    .site-image {
+        width: 100%;
+    }
+
     .skill-lists {
         flex-direction: column;
     }
