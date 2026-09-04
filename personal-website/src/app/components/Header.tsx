@@ -6,7 +6,7 @@ export default function Header() {
             <nav>
                 <ul className='page-nav'>
                     <li>
-                        <Link href='#hero'>Back to Top</Link>
+                        <Link href='#hero'>Top of Page</Link>
                     </li>
                     <li>
                         <Link href='#projects'>Projects</Link>
@@ -19,6 +19,9 @@ export default function Header() {
                     </li>
                     <li>
                         <Link href='#contact'>Contact</Link>
+                    </li>
+                    <li>
+                        <Link href='/blogs'>Blogs</Link>
                     </li>
                 </ul>
             </nav>
