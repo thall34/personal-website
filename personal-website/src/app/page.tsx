@@ -4,6 +4,7 @@ import Projects from './components/Projects'
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Websites from './components/Websites';
 
 export default function Home() {
     return (
@@ -13,6 +14,8 @@ export default function Home() {
             <div className='line-break'/>
             <Projects />
             <div className='line-break'/>
+            <Websites />
+            <div className='line-break' />
             <AboutMe />
             <div className='line-break'/>
             <Skills />

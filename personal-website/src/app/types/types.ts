@@ -38,3 +38,10 @@ export interface BlogObject {
     publishDate: string,
     images: CloudImage[],
 }
+
+export interface SiteObject {
+    id: number,
+    name: string,
+    url: string,
+    image: CloudImage,
+}

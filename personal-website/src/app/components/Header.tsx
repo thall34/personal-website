@@ -12,6 +12,9 @@ export default function Header() {
                         <Link href='#projects'>Projects</Link>
                     </li>
                     <li>
+                        <Link href='#websites'>Websites</Link>
+                    </li>
+                    <li>
                         <Link href='#about-me'>About</Link>
                     </li>
                     <li>
@@ -19,9 +22,6 @@ export default function Header() {
                     </li>
                     <li>
                         <Link href='#contact'>Contact</Link>
-                    </li>
-                    <li>
-                        <Link href='/blogs'>Blogs</Link>
                     </li>
                 </ul>
             </nav>
