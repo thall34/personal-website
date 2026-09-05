@@ -55,7 +55,7 @@ function Blogs(): React.JSX.Element {
                     posts.map((post) => (
                     <div key={post.id} className='blog-card'>
                         <h2>{post.name}</h2>
-                        <p>{post.text}</p>
+                        <p className='highlight-text'>{post.text}</p>
                         <p>Published on {new Date(post.publishDate).toLocaleString('en-CA', {month: 'long', day: 'numeric', year: 'numeric'})}</p>
                         <div className='blog-images'>
                             {post.images.map((image, index) => (

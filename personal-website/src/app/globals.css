@@ -425,6 +425,7 @@ ul {
     width: 100%;
     padding: 2em;
     gap: 1em;
+    font-size: 1.5em;
 }
 
 .blog-card {
@@ -523,7 +524,15 @@ ul {
         width: 100%;
     }
 
+    .blog-images {
+        flex-direction: column;
+    }
+
     .blog-image-container > img {
         width: 10em;
     } 
+
+    .button-container {
+        width: 90%;
+    }
 }
