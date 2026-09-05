@@ -21,7 +21,7 @@ function ImageCarousel(): React.JSX.Element {
 
     function handleShiftRight(): void {
         if (currentIndex === maxIndex) {
-            return;
+            setCurrentIndex(-1)
         };
 
         setCurrentIndex(prevIndex => prevIndex + 1);
@@ -30,7 +30,7 @@ function ImageCarousel(): React.JSX.Element {
 
     function handleShiftLeft(): void {
         if (currentIndex === 0) {
-            return;
+            setCurrentIndex(maxIndex + 1);
         };
 
         setCurrentIndex(prevIndex => prevIndex - 1);
@@ -60,9 +60,7 @@ function ImageCarousel(): React.JSX.Element {
         <div className="carousel-container">
             <h1>My Other <span className='highlight-text'>Projects</span></h1>
             <div className="display-container">
-                {currentIndex !== 0 ? 
                     <button onClick={handleShiftLeft}><img src='./images/chevron-left.svg' alt='Previous'/></button> 
-                    : <button disabled><img src='./images/chevron-left.svg' alt='Previous'/></button>}
                 <div className="display">
                     <div className="image-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     {otherProjects.map((project) => (
@@ -79,9 +77,7 @@ function ImageCarousel(): React.JSX.Element {
                     ))}
                     </div>
                 </div>
-                {currentIndex !== maxIndex ? 
                     <button onClick={handleShiftRight}><img src='./images/chevron-right.svg' alt='Next'/></button> 
-                    : <button disabled><img src='./images/chevron-right.svg' alt='Next'/></button>}
             </div>
             <div className="circle-container">
                     {otherProjects.map((image) => (
